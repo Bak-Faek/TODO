@@ -1,5 +1,8 @@
-const inputBox = document.getElementById ("input-box")
-const listContainer = document.getElementById ("list-container")
+const inputBox = document.getElementById ("input-box");
+const listContainer = document.getElementById ("list-container");
+
+const taskList = document.getElementById('list-container');
+const taskListContainer = document.querySelector ('container');
 
 function addTask () {
     if (inputBox.value === ''){
@@ -29,6 +32,8 @@ listContainer.addEventListener ("click", function (e){
     }
 }, false);
 
+
+
 function saveData () {
     localStorage.setItem ("data", listContainer.innerHTML);
 }
@@ -37,3 +42,6 @@ function showTask () {
     listContainer.innerHTML = localStorage.getItem ("data")
 }
 showTask ();
+
+
+

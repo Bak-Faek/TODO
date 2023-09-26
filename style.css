@@ -5,23 +5,35 @@ font-family:'Times New Roman', Times, serif;
 box-sizing: border-box;
 };
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .container {
+    display: flex;
     width: 100%;
     min-height: 100vh;
     padding: 10px;
-
+    align-items: flex-start;
+    justify-self: center;
+    box-sizing: border-box;
+    
 }
 
 .todo-app {
     width: 100%;
     max-width: 540px;
     background-color: white;
-    margin: 100px auto 20px;
-    padding: 40px 30px 70px ;
+    margin: 10px auto 20px;
     border-radius: 10px;
+    margin-top: 0;
+
 }
 
-.todo-app h2 {
+h2 {
     color:blue ;
     display: flex;
     align-items: center;
@@ -32,11 +44,14 @@ box-sizing: border-box;
 .row {
     display: flex ;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background-color: aqua ;
     border-radius: 30px;
     padding-left: 20px;
-    margin-bottom: 20px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+   margin-bottom: 0;
 }
 input {
     flex: 1;
@@ -104,3 +119,25 @@ ul li span {
 ul li span:hover {
     background-color: yellow;
 }
+
+@media screen and (max-width : 700px) {
+ .row {
+    position: absolute ;
+    bottom: 0;
+    min-width: 300px;
+    width: 100%;
+z-index: 2;
+ }
+ ul li {
+    font-size: 3vmax;
+}
+span {
+    font-size:3vmax ;
+}
+#list-container {
+    overflow: hidden;
+    overflow-y: scroll;
+}
+}
+
+
