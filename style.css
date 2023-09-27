@@ -79,6 +79,7 @@ ul li {
     user-select: none;
     cursor: pointer;
     position: relative;
+    
 }
 
 ul li::before {
@@ -126,17 +127,15 @@ ul li span:hover {
     bottom: 0;
     min-width: 300px;
     width: 100%;
-z-index: 2;
  }
- ul li {
-    font-size: 3vmax;
-}
+
 span {
     font-size:3vmax ;
 }
 #list-container {
     overflow: hidden;
     overflow-y: scroll;
+    max-height: 800px;
 }
 }
 
